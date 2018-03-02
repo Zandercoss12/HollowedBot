@@ -1,0 +1,17 @@
+{ 
+  "name": "HollowedBot",
+  "description": "HollowedBot",
+  "version": "1.0.0",
+  "main": "bot.js",
+  "engines": {
+      "node": "7.8.0",
+      "npm": "4.2.0"
+  },
+  "scripts": {
+    "start": "node bot.js"
+  },
+  "dependencies": {
+    "discord.js": "11.1.0",
+    "request": "2.81.0"
+  }
+}
