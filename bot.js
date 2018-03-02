@@ -22,7 +22,7 @@ client.on("message", async message => {
   }
 
   if (command === "setpresence") {
-  	const ownerRole = message.guild.roles.find("name", "Owner");
+  	var ownerRole = message.guild.roles.find("name", "Owner");
   	if (message.member.roles.has(ownerRole.id)) {
   		const setPresence = args.join(" ");
   		message.channel.sendMessage(message.author.toString() + " Successfully changed presence to " + setPresence + "!")
