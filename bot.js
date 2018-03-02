@@ -29,7 +29,7 @@ client.on("message", async message => {
   	  	client.user.setPresence({game: {name: setPresence, type: 0}});
   		  message.channel.sendMessage(message.author.toString() + " Successfully changed presence to `" + setPresence + "`!")
   	} else {
-      message.channel.sendMessage(message.author.toString() + " Oh! You beautiful creature! You do not have the `Owner` role!");
+      message.channel.sendMessage(message.author.toString() + " Oh! You beautiful person! You do not have the `Owner` role!");
     }
   }
 
