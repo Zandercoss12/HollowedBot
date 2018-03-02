@@ -29,7 +29,7 @@ client.on("message", async message => {
 
   if (command === "info") {
   	var embed = new Discord.RichEmbed()
-  	.setThumbnail(message.client.avatarURL)
+  	.setThumbnail(message.author.avatarURL)
   	.addField("Bot for Hollowed Discord Server")
   	.addField("Made By: @Zandercross12#7714")
   	.setColor(0x00FFFF)
