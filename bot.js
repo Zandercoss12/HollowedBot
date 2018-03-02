@@ -27,7 +27,7 @@ client.on("message", async message => {
   	  	const setPresence = args.join(" ");
   	  	message.delete().catch(O_o=>{});
   	  	client.user.setPresence({game: {name: setPresence, type: 0}});
-  		  message.channel.sendMessage(message.author.toString() + " Successfully changed presence to " + setPresence + "!")
+  		  message.channel.sendMessage(message.author.toString() + " Successfully changed presence to `" + setPresence + "`!")
   	} else {
       message.channel.sendMessage(message.author.toString() + " Oh! You beautiful creature! You do not have the `Owner` role!");
     }
