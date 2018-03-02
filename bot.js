@@ -25,6 +25,7 @@ client.on("message", async message => {
   	let ownerRole = message.guild.roles.find("name", "Owner");
   	if (message.member.roles.has(ownerRole.id)) {
   		const setPresence = args.join(" ");
+  		message.channel.sendMessage(message.author.toString() + " Successfully changed presence to " + setPresence + "!")
   		message.delete().catch(O_o=>{});
   		client.user.setPresence({game: {name: setPresence, type: 0}});
   	} else {
