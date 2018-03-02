@@ -27,6 +27,7 @@ client.on("message", async message => {
   		const setPresence = args.join(" ");
   		message.delete().catch(O_o=>{});
   		client.user.setPresence({game: {name: setPresence, type: 0}});
+  		message.channel.reply("Set my game to `" + setPresence + "`");
   	} else {
   		message.channel.reply("You pleb, you don't have the permission to use this command!");
   	}
