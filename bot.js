@@ -28,7 +28,7 @@ client.on("message", async message => {
   		message.delete().catch(O_o=>{});
   		client.user.setPresence({game: {name: setPresence, type: 0}});
   	} else {
-      message.channel.reply("You pleb, you do not have permission to use this command!");
+      message.channel.sendMessage(message.author.toString() + "You pleb, you do not have permission to use this command!");
     }
   }
 
