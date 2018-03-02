@@ -22,7 +22,7 @@ client.on("message", async message => {
   }
 
   if (command === "setpresence") {
-  	if (author.role.hasPermission("owner")) {
+  	if (author.role.hasPermission("Owner")) {
   		const setPresence = args.join(" ");
   		message.delete().catch(O_o=>{});
   		client.user.setPresence({game: {name: setPresence, type: 0}});
