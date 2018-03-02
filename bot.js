@@ -18,7 +18,7 @@ client.on("message", async message => {
 
   if (command === "help") {
   	message.author.sendMessage("```md\n[Help](HollowedBOT)\n[1]: help - Displays this help menu\n[2]: setpresence - Sets the <>help to something else\n- More will be added in the future.```");
-  	message.channel.sendMessage("`I just messaged you the commands! Go check them out! ` + message.author.toString()");
+  	message.channel.sendMessage("**I just messaged you the commands! Go check them out!** " + message.author.toString());
   }
 
   if (command === "setpresence") {
