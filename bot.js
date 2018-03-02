@@ -24,10 +24,10 @@ client.on("message", async message => {
   if (command === "setpresence") {
   	var ownerRole = message.guild.roles.find("name", "Owner");
   	if (message.member.roles.has(ownerRole.id)) {
-  		const setPresence = args.join(" ");
-  		message.channel.sendMessage(message.author.toString() + " Successfully changed presence to " + setPresence + "!")
-  		message.delete().catch(O_o=>{});
-  		client.user.setPresence({game: {name: setPresence, type: 0}});
+  	  	const setPresence = args.join(" ");
+  	  	message.delete().catch(O_o=>{});
+  	  	client.user.setPresence({game: {name: setPresence, type: 0}});
+  		  message.channel.sendMessage(message.author.toString() + " Successfully changed presence to " + setPresence + "!")
   	} else {
       message.channel.sendMessage(message.author.toString() + " You pleb, you do not have permission to use this command!");
     }
