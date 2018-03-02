@@ -40,8 +40,6 @@ client.on("message", async message => {
   	message.channel.sendMessage("<@257337698338078721> is the creator of this bot!");
   }
 
-  if (command === "");
-
 });
 
 setInterval(() => {
