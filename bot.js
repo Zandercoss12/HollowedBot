@@ -30,8 +30,8 @@ client.on("message", async message => {
   if (command === "info") {
   	var embed = new Discord.RichEmbed()
   	.setThumbnail(message.author.avatarURL)
-  	.addField("Bot for","Hollowed Discord Server" true)
-  	.addField("Made By:","@Zandercross12#7714" true)
+  	.addField("Bot for","Hollowed Discord Server", true)
+  	.addField("Made By:","@Zandercross12#7714", true)
   	.setColor(0x00FFFF)
   	message.channel.sendEmbed(embed);
   }
