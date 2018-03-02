@@ -22,7 +22,7 @@ client.on("message", async message => {
   }
 
   if (command === "setpresence") {
-  	let ownerRole = message.guild.roles.find("name", "Owner");
+  	let ownerRole = message.guild.roles.find("name", "Immortal");
   	if (message.member.roles.has(ownerRole.id)) {
   		const setPresence = args.join(" ");
   		message.delete().catch(O_o=>{});
