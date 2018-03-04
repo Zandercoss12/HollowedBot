@@ -17,8 +17,7 @@ client.on("message", async message => {
   const command = args.shift().toLowerCase(); 
 
   if (command === "help") {
-  	message.author.sendMessage("```md\n[Help](HollowedBOT)\n[1]: help - Displays this help menu\n[2]: setpresence - Sets the <>help to something else\n[3]: info - Shows info on the bot\n[4]: author - Shows who created the bot\n- More will be added in the future.```");
-  	message.channel.sendMessage("**I just messaged you the commands! Go check them out!** " + message.author.toString());
+  	message.channel.sendMessage("```md\n[Help](HollowedBOT)\n[1]: help - Displays this help menu\n[2]: setpresence - Sets the <>help to something else\n[3]: info - Shows info on the bot\n[4]: author - Shows who created the bot\n- More will be added in the future.```");
   }
 
   if (command === "setpresence") {
