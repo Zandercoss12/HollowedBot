@@ -45,13 +45,7 @@ client.on("message", async message => {
   	message.channel.sendMessage("<@257337698338078721> is the creator of this bot!");
   }
 
-  switch (command) {
-    case tacoz:
-      message.channel.sendMessage("TACOZ");
-      break;
-    default:
-      message.channel.sendMessage("I do not know that command!");
-  }
+`
 
 });
 
