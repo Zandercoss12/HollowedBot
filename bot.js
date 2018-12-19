@@ -59,7 +59,7 @@ client.on("message", async message => {
  	}
   }
   
- if (message.content.shift.toLowerCase() === "im") {
+ if (message.content.toLowerCase() === "im ") {
  	const sayMessage = args.join(" ");
  	message.channel.sendMessage("Hi " + sayMessage + "! I'm HollowedBOT.");
  }
