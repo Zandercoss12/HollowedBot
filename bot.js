@@ -17,7 +17,10 @@ client.on("message", async message => {
   const command = args.shift().toLowerCase(); 
 
   if (command === "help") {
-  	message.channel.sendMessage("```md\n[Help](HollowedBOT)\n[1]: help - Displays this help menu\n[2]: setpresence - Sets the <>help to something else\n[3]: info - Shows info on the bot\n[4]: author - Shows who created the bot\n- More will be added in the future.```");
+    var ownerRole = message.guild.roles.find("name", "Owner");
+    if (message.member.roles.has(ownerRole.id)) {
+    	message.channel.sendMessage("```md\n[Help](HollowedBOT)\n[1]: help - Displays this help menu\n[2]: setpresence - Sets the <>help to something else\n[3]: info - Shows info on the bot\n[4]: author - Shows who created the bot\n[5]: say - Says what the person wants it to say.\n- More will be added in the future.```");
+    }
   }
 
   if (command === "setpresence") {
@@ -42,9 +45,21 @@ client.on("message", async message => {
   }
 
   if (command === "author") {
-  	message.channel.sendMessage("<@257337698338078721> is the creator of this bot!");
+    var ownerRole = message.guild.roles.find("name", "Owner");
+    if (message.member.roles.has(ownerRole.id)) {
+    	message.channel.sendMessage("<@257337698338078721> is the creator of this bot!");
+    }
   }
 
+  if(command === "say") {
+    var ownerRole = message.guild.roles.find("name", "Owner");
+    if (message.member.roles.has(ownerRole.id)) {
+      const sayMessage = args.join(" ");
+      message.delete().catch(O_o=>{});
+      message.channel.send(sayMessage);
+    }
+  }
+  
 });
 
 setInterval(() => {
