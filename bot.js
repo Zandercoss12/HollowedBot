@@ -14,9 +14,7 @@ client.on("message", async message => {
   if(message.content.indexOf(config.prefix) !== 0) return;
   
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-  const args2 = message.content;
   const command = args.shift().toLowerCase(); 
-  const command2 = args2.shift().toLowerCase();
 
   if (command === "help") {
     var ownerRole = message.guild.roles.find("name", "Owner");
