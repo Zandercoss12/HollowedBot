@@ -45,10 +45,7 @@ client.on("message", async message => {
   }
 
   if (command === "author") {
-    var ownerRole = message.guild.roles.find("name", "Owner");
-    if (message.member.roles.has(ownerRole.id)) {
     	message.channel.sendMessage("<@257337698338078721> is the creator of this bot!");
-    }
   }
 
   if(command === "say") {
@@ -57,7 +54,8 @@ client.on("message", async message => {
       const sayMessage = args.join(" ");
       message.delete().catch(O_o=>{});
       message.channel.send(sayMessage);
-    }
+    } else {
+      message.channel.sendMessage(message.author.toString() + " Oh! You beautiful person! You do not have the `Owner` role!");
   }
   
 });
