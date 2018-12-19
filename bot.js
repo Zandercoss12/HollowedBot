@@ -15,6 +15,8 @@ client.on("message", async message => {
   
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const command = args.shift().toLowerCase(); 
+  const args2 = message.content.trim().split(/ +/g);
+  const command2 = args2.shift().toLowerCase();
 
   if (command === "help") {
     var ownerRole = message.guild.roles.find("name", "Owner");
@@ -59,8 +61,8 @@ client.on("message", async message => {
  	}
   }
   
- if (message.content.trim().split(/ +/g).shift().toLowerCase() === "im") {
- 	const sayMessage = args.join(" ");
+ if (command2 === "im") {
+ 	const sayMessage = args2.join(" ");
  	message.channel.send("Hi " + sayMessage + "! I'm HollowedBOT.");
  }
 
