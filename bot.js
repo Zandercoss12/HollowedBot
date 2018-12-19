@@ -59,12 +59,12 @@ client.on("message", async message => {
     } else {
       message.channel.sendMessage(message.author.toString() + " Oh! You beautiful person! You do not have the `Owner` role!");
  	}
- }
+  }
   
- if (command2 === "im") {
- 	const sayMessage = args.join(" ");
- 	message.channel.sendMessage("Hi " + sayMessage + "! I'm HollowedBOT.");
- }
+ // if (command2 === "im") {
+ // 	const sayMessage = args.join(" ");
+ // 	message.channel.sendMessage("Hi " + sayMessage + "! I'm HollowedBOT.");
+ // }
 
 });
 
