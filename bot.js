@@ -61,7 +61,7 @@ client.on("message", async message => {
  	}
  }
   
- if (command2 === "im" || command2 === "i'm") {
+ if (command2 === "im") {
  	const sayMessage = args.join(" ");
  	message.channel.sendMessage("Hi " + sayMessage + "! I'm HollowedBOT.");
  }
