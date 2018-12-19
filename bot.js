@@ -59,10 +59,10 @@ client.on("message", async message => {
  	}
   }
   
- // if (command2 === "im") {
- // 	const sayMessage = args.join(" ");
- // 	message.channel.sendMessage("Hi " + sayMessage + "! I'm HollowedBOT.");
- // }
+ if (message.content.shift.toLowerCase() === "im") {
+ 	const sayMessage = args.join(" ");
+ 	message.channel.sendMessage("Hi " + sayMessage + "! I'm HollowedBOT.");
+ }
 
 });
 
