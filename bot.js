@@ -59,9 +59,9 @@ client.on("message", async message => {
  	}
   }
   
- if (message.content.toLowerCase() === "im ") {
+ if (message.content.trim().split(/ +/g).shift().toLowerCase() === "im") {
  	const sayMessage = args.join(" ");
- 	message.channel.sendMessage("Hi " + sayMessage + "! I'm HollowedBOT.");
+ 	message.channel.send("Hi " + sayMessage + "! I'm HollowedBOT.");
  }
 
 });
