@@ -16,7 +16,7 @@ client.on("message", async message => {
   const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
   const args2 = message.content.trim().split(/ +/g);
   const command = args.shift().toLowerCase(); 
-  const command2 = args.shift().toLowerCase();
+  const command2 = args2.shift().toLowerCase();
 
 
   if (command === "help") {
